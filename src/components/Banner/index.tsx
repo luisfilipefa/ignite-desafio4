@@ -10,7 +10,7 @@ export default function Banner() {
       bgImage="url(/banner.png)"
       bgSize="cover"
     >
-      <Text fontSize="lg" color="gray.50">
+      <Text fontSize="lg" color="gray.50" fontWeight="medium">
         5 Continentes,
         <br />
         infinitas possibilidades.

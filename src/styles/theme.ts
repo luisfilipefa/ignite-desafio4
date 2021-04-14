@@ -4,7 +4,7 @@ export const theme = extendTheme({
   colors: {
     white: "#fff",
     black: "#000",
-    text: "#47585B",
+    cyan: "#47585B",
     highlight: "#FFBA08",
     highlightAlpha: "rgba(255,186,8,0.5)",
     grayAlpha: "rgba(153,153,153, 0.5)",
@@ -35,5 +35,7 @@ export const theme = extendTheme({
     sm: "0.875rem",
     md: "1.125rem",
     lg: "1.25rem",
+    xl: "1.5rem",
+    "2xl": "2.25rem",
   },
 });
