@@ -30,6 +30,7 @@ export default function TypeCard({
       align="center"
       boxShadow={{ md: "xl" }}
       borderRadius={{ md: "base" }}
+      h={{ md: "120px" }}
       {...rest}
     >
       {showIcons ? (

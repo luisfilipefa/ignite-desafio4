@@ -13,25 +13,35 @@ export default function TypesSection() {
       px={{ sm: "5" }}
     >
       <GridItem>
-        <TypeCard title="vida noturna" image="/cocktail.svg" alt="cocktail" />
+        <TypeCard
+          title="vida noturna"
+          image="/cocktail.svg"
+          alt="cocktail"
+          justifyContent={{ md: "center" }}
+        />
       </GridItem>
       <GridItem>
         <TypeCard
           title="praia"
           image="/surf.svg"
           alt="surf"
-          justifyContent={{ sm: "flex-end" }}
+          justifyContent={{ sm: "flex-end", md: "center" }}
         />
       </GridItem>
       <GridItem>
-        <TypeCard title="moderno" image="/building.svg" alt="modern" />
+        <TypeCard
+          title="moderno"
+          image="/building.svg"
+          alt="modern"
+          justifyContent={{ md: "center" }}
+        />
       </GridItem>
       <GridItem>
         <TypeCard
           title="clássico"
           image="/museum.svg"
           alt="museum"
-          justifyContent={{ sm: "flex-end" }}
+          justifyContent={{ sm: "flex-end", md: "center" }}
         />
       </GridItem>
       <GridItem colSpan={{ sm: 2, md: 1 }}>
@@ -39,7 +49,7 @@ export default function TypesSection() {
           title="e mais..."
           image="/earth.svg"
           alt="earth"
-          justifyContent={{ sm: "center" }}
+          justifyContent={{ sm: "center", md: "center" }}
         />
       </GridItem>
     </Grid>
