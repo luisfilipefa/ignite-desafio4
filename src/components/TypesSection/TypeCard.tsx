@@ -25,10 +25,16 @@ export default function TypeCard({
   const showIcons = useBreakpointValue({ sm: false, md: true });
 
   return (
-    <Flex direction={{ sm: "row", md: "column" }} align="center" {...rest}>
+    <Flex
+      direction={{ sm: "row", md: "column" }}
+      align="center"
+      boxShadow={{ md: "xl" }}
+      borderRadius={{ md: "base" }}
+      {...rest}
+    >
       {showIcons ? (
         <Box w={{ md: "60px" }} mb={{ md: "2" }}>
-          <Image src={image} alt={alt} />
+          <Image src={image} alt={alt} w={{ md: "60px" }} />
         </Box>
       ) : (
         <Circle size="8px" bg="highlight" mr="2" />
