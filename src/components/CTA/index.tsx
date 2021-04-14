@@ -5,7 +5,12 @@ import React from "react";
 export default function CTA() {
   return (
     <Box py={{ sm: "10" }}>
-      <Text align="center" color="cyan" fontSize="lg" fontWeight="medium">
+      <Text
+        align="center"
+        color="cyan"
+        fontSize={{ sm: "lg", md: "xl" }}
+        fontWeight="medium"
+      >
         Vamos nessa?
         <br />
         Então escolha seu continente

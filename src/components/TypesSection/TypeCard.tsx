@@ -1,16 +1,39 @@
-import { Circle, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Circle,
+  Flex,
+  FlexProps,
+  Image,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 
 import React from "react";
 
-interface TypeCardProps {
+interface TypeCardProps extends FlexProps {
   title: string;
+  image?: string;
+  alt?: string;
 }
 
-export default function TypeCard({ title }: TypeCardProps) {
+export default function TypeCard({
+  title,
+  image,
+  alt,
+  ...rest
+}: TypeCardProps) {
+  const showIcons = useBreakpointValue({ sm: false, md: true });
+
   return (
-    <Flex align="center" justifyContent="center">
-      <Circle size="8px" bg="highlight" mr="2" />
-      <Text color="cyan" fontSize="md" fontWeight="medium">
+    <Flex direction={{ sm: "row", md: "column" }} align="center" {...rest}>
+      {showIcons ? (
+        <Box w={{ md: "60px" }} mb={{ md: "2" }}>
+          <Image src={image} alt={alt} />
+        </Box>
+      ) : (
+        <Circle size="8px" bg="highlight" mr="2" />
+      )}
+      <Text color="cyan" fontSize={{ sm: "md", md: "lg" }} fontWeight="medium">
         {title}
       </Text>
     </Flex>

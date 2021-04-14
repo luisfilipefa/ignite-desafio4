@@ -26,10 +26,14 @@ export const theme = extendTheme({
     heading: "Poppins",
     body: "Poppins",
   },
+  //  quando não especificado todos os breakpoints, os hooks que os utilizam se comportam de forma estranha
+  //  reproduzir removendo xl e 2xl e usando o useBreakpointValue, e depois analisando o console
   breakpoints: {
     sm: "375px",
     md: "768px",
     lg: "1024px",
+    xl: "1200px",
+    "2xl": "1400px",
   },
   fontSizes: {
     sm: "0.875rem",
