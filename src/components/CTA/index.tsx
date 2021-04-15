@@ -8,7 +8,7 @@ export default function CTA() {
       <Text
         align="center"
         color="cyan"
-        fontSize={{ sm: "lg", md: "xl" }}
+        fontSize={{ sm: "lg", md: "xl", lg: "2xl" }}
         fontWeight="medium"
       >
         Vamos nessa?

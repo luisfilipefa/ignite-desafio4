@@ -9,8 +9,8 @@ export default function TypesSection() {
       templateRows={{ sm: "repeat(3, 1fr)", md: "1fr" }}
       templateColumns={{ sm: "repeat(2, 1fr)", md: "repeat(5, 1fr)" }}
       gap={{ sm: 4, md: 2 }}
-      py={{ sm: "10" }}
-      px={{ sm: "5" }}
+      py={{ sm: "10", lg: "20" }}
+      px={{ sm: "5", lg: "150px" }}
     >
       <GridItem>
         <TypeCard

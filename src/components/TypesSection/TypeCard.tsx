@@ -30,17 +30,21 @@ export default function TypeCard({
       align="center"
       boxShadow={{ md: "xl" }}
       borderRadius={{ md: "base" }}
-      h={{ md: "120px" }}
+      py={{ lg: "4" }}
       {...rest}
     >
       {showIcons ? (
-        <Box w={{ md: "60px" }} mb={{ md: "2" }}>
-          <Image src={image} alt={alt} w={{ md: "60px" }} />
+        <Box w={{ md: "60px", lg: "100px" }} mb={{ md: "2", lg: "4" }}>
+          <Image src={image} alt={alt} />
         </Box>
       ) : (
         <Circle size="8px" bg="highlight" mr="2" />
       )}
-      <Text color="cyan" fontSize={{ sm: "md", md: "lg" }} fontWeight="medium">
+      <Text
+        color="cyan"
+        fontSize={{ sm: "md", md: "lg", lg: "24" }}
+        fontWeight="medium"
+      >
         {title}
       </Text>
     </Flex>
