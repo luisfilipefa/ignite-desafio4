@@ -1,4 +1,4 @@
-import { Box, Image, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, useBreakpointValue } from "@chakra-ui/react";
 
 import React from "react";
 
@@ -9,9 +9,11 @@ export default function Banner() {
   });
 
   return (
-    <Box
-      py={{ sm: "5", md: "10", lg: "20" }}
-      px={{ sm: "3", md: "70px", lg: "150px" }}
+    <Flex
+      direction="column"
+      justifyContent="center"
+      h={{ sm: "25vh", lg: "61vh" }}
+      px={{ sm: "3", md: "10", lg: "150px" }}
       bgImage="url(/banner.png)"
       bgSize="cover"
       bgPosition="center"
@@ -35,12 +37,12 @@ export default function Banner() {
         <Box
           w={{ md: "200px", lg: "550px" }}
           position="absolute"
-          top={{ md: "90" }}
+          bottom={{ md: "-5" }}
           right={{ md: "18", lg: "70" }}
         >
           <Image src="/airplane.svg" />
         </Box>
       )}
-    </Box>
+    </Flex>
   );
 }

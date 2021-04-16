@@ -8,7 +8,7 @@ export default function Header() {
       as="header"
       align="center"
       justifyContent="center"
-      py={{ sm: "5", lg: "6" }}
+      h={{ sm: "8vh", lg: "16vh" }}
     >
       <Logo />
     </Flex>
