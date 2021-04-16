@@ -1,44 +1,39 @@
-import { Flex, Heading } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/image";
+import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
-import { getContinentBySlug, getContinents, Continent } from "../../api/api";
+import {
+  getContinentBySlug,
+  getContinents,
+  Continent,
+  getTopCitiesByContinent,
+  City,
+} from "../../api/api";
+import ContinentBanner from "../../components/Banner/ContinentBanner";
+import CitiesCard from "../../components/CitiesCards";
+import Summary from "../../components/Summary";
 import { getImageUrl } from "../../utils/getImageUrl";
 
 interface ContinentProps {
   continent: Continent;
+  cities: City[];
 }
 
-export default function ContinentPage({ continent }: ContinentProps) {
-  console.log(continent.banner.url);
+export default function ContinentPage({ continent, cities }: ContinentProps) {
   return (
     <>
       <Head>
         <title>World Trip | {continent.title}</title>
       </Head>
-      <Flex
-        as="header"
-        position="relative"
-        align="center"
-        justifyContent="center"
-        bgImage={`url(${getImageUrl(continent.banner.url)})`}
-        bgSize="cover"
-        bgPosition="center"
-        h={{ sm: "25vh" }}
-        _after={{
-          content: "''",
-          bg: "rgba(0,0,0,0.4)",
-          position: "absolute",
-          top: "0",
-          left: "0",
-          w: "100%",
-          h: "100%",
-        }}
-      >
-        <Heading color="gray.50" zIndex="popover">
-          {continent.title}
-        </Heading>
-      </Flex>
+      <ContinentBanner title={continent.title} banner={continent.banner.url} />
+      <Summary
+        description={continent.description}
+        total_countries={continent.total_countries}
+        total_languages={continent.total_languages}
+        top_hundred_cities={continent.top_hundred_cities}
+      />
+      <CitiesCard cities={cities} />
     </>
   );
 }
@@ -54,9 +49,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
-  const response = await getContinentBySlug(String(slug));
+  const continent_res = await getContinentBySlug(String(slug));
 
-  const continent = response[0];
+  const continent: Continent = continent_res[0];
 
-  return { props: { continent } };
+  const cities = await getTopCitiesByContinent(String(continent.title));
+
+  return { props: { continent, cities } };
 };

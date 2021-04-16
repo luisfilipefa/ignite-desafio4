@@ -1,6 +1,6 @@
 import { Box, Circle, Grid, GridItem, Text } from "@chakra-ui/layout";
 
-import Banner from "../components/Banner";
+import HomeBanner from "../components/Banner/HomeBanner";
 import CTA from "../components/CTA";
 import Divider from "../components/Divider";
 import { Flex } from "@chakra-ui/layout";
@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>World Tripe | Home</title>
       </Head>
-      <Banner />
+      <HomeBanner />
       <TypesSection />
       <Divider />
       <CTA />

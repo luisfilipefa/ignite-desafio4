@@ -2,7 +2,7 @@ import { Box, Flex, Image, Text, useBreakpointValue } from "@chakra-ui/react";
 
 import React from "react";
 
-export default function Banner() {
+export default function HomeBanner() {
   const showPlane = useBreakpointValue({
     sm: false,
     md: true,
