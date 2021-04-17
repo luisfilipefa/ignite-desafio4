@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ignite Desafio 4
+Desafio referente ao 4º módulo do Ignite, bootcamp da Trilha de React.Js da Rocketseat.
 
-## Getting Started
+## Overview
+O objetivo deste desafio era trabalhar o design responsivo, utilizando o Chakra UI, que disponibiliza um sistema de responsividade bem interessante já por padrão, no qual podemos utilizar nas definições de estilo dos nossos componentes, tamanhos específicos para determinados breakpoints. Vou deixar um link para a documentação do Chakra que trata sobre essa parte, vale muito a pena dar uma conferida.
 
-First, run the development server:
+https://chakra-ui.com/docs/features/responsive-styles
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Acabei estilizando o app para os seguintes breakpoints: 
+- 375px (mobile);
+- 768px (tablet);
+- 1024px (laptop >);
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mobile:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+![image](https://user-images.githubusercontent.com/70351489/115096403-4d8d0700-9efb-11eb-8644-33314aa3cad9.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Tablet:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![image](https://user-images.githubusercontent.com/70351489/115096380-3817dd00-9efb-11eb-87b3-730c1fd85b3c.png)
 
-## Learn More
+Desktop:
 
-To learn more about Next.js, take a look at the following resources:
+![image](https://user-images.githubusercontent.com/70351489/115096337-030b8a80-9efb-11eb-9054-6290215022af.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Reprodução local
+Eu utilizei um app do Strapi para o backend deste projeto, porém acabei configurando o sqlite como banco de dados, e na hora de fazer o deploy no heroku, que não aceita sqlite, os dados se perdem. Vou fazer a migração do banco de dados e após finalizar atualizo o Readme com as infos pra reprodução.
