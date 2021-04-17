@@ -14,14 +14,19 @@ Acabei estilizando o app para os seguintes breakpoints:
 Mobile:
 
 ![image](https://user-images.githubusercontent.com/70351489/115096403-4d8d0700-9efb-11eb-8644-33314aa3cad9.png)
+![image](https://user-images.githubusercontent.com/70351489/115096676-91344080-9efc-11eb-9f38-0f50516e7dd9.png)
 
 Tablet:
 
 ![image](https://user-images.githubusercontent.com/70351489/115096380-3817dd00-9efb-11eb-87b3-730c1fd85b3c.png)
 
+![image](https://user-images.githubusercontent.com/70351489/115096695-a4471080-9efc-11eb-9e36-65d59c89deb5.png)
+
 Desktop:
 
 ![image](https://user-images.githubusercontent.com/70351489/115096337-030b8a80-9efb-11eb-9054-6290215022af.png)
+
+![image](https://user-images.githubusercontent.com/70351489/115096658-79f55300-9efc-11eb-81ba-d5a5166e56cb.png)
 
 ## Reprodução local
 Eu utilizei um app do Strapi para o backend deste projeto, porém acabei configurando o sqlite como banco de dados, e na hora de fazer o deploy no heroku, que não aceita sqlite, os dados se perdem. Vou fazer a migração do banco de dados e após finalizar atualizo o Readme com as infos pra reprodução.
